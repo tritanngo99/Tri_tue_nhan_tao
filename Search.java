@@ -1,4 +1,4 @@
-package Trochoi8so;
+package trochoi8so;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,12 +8,12 @@ public class Search {
   public static void main(String[] args) {
 	State Start,Goal;
 	State O = null;
-	List<State> Open = new ArrayList();
-	List<State> Closed = new ArrayList();
+	List<State> Open = new ArrayList<>();
+	List<State> Closed = new ArrayList<>();
 	Goal = new State();
 	Start = new State();
 	Random rand = new Random();
-	for(int i=0;i<100;i++) {
+	for(int i=0;i<10;i++) {
 		Operator op = new Operator(rand.nextInt(4));
 		State n = op.Move(Start);
 		if(n!=null) Start = n;
@@ -23,7 +23,7 @@ public class Search {
 	//1. 
 	Open.add(Start);
 	//2-6.
-	while(Open.size()==0) {
+	while(Open.size()!=0) {
 		//3
 		O = Open.remove(0);
 		Closed.add(O);
