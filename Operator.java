@@ -1,5 +1,4 @@
-package Trochoi8so;
-
+package trochoi8so;
 
 public class Operator {
 	// 0: Up
